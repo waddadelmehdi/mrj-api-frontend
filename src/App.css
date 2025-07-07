@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #2d2d2d;
+  color: #fff;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-card {
+  background: linear-gradient(135deg, #4a4a4a 0%, #2d2d2d 100%);
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #e8e8e8 0%, #d0d0d0 100%);
+  width: 250px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-section {
+  padding: 30px 20px;
+  text-align: center;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  background: #564745;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #564745;
+  margin-bottom: 5px;
+}
+
+.company-subtitle {
+  font-size: 14px;
+  color: #666;
+  letter-spacing: 2px;
+}
+
+.nav-menu {
+  flex: 1;
+  padding: 0;
+}
+
+.nav-item {
+  display: block;
+  padding: 20px 30px;
+  text-decoration: none;
+  color: #564745;
+  font-weight: 500;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.nav-item:hover {
+  background: rgba(139, 69, 19, 0.1);
+  padding-left: 35px;
+}
+
+.nav-item.active {
+  background: #564745;
+  color: white;
+  font-weight: 600;
+}
+
+.footer-text {
+  padding: 20px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  background: #f0f0f0;
+}
+
+.content-area {
+  flex: 1;
+  background: linear-gradient(135deg, #564745 0%, #564745 100%);
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.welcome-text {
+  font-size: 32px;
+  font-weight: 300;
+  color: #f5f5f5;
+  text-align: center;
+  letter-spacing: 1px;
+  z-index: 1;
+  position: relative;
+}
+
+.page-content {
+  width: 100%;
+  max-width: 600px;
+  z-index: 1;
+  position: relative;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.account-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.account-card:hover {
+  transform: translateY(-5px);
+}
+
+.account-number {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 5px;
+}
+
+.account-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.account-type {
+  font-size: 12px;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.account-balance {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.account-date {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.account-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.account-status.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.account-status.inactive {
+  background: #f44336;
+  color: white;
+}
+
+.about-content {
+  line-height: 1.8;
+  color: #f5f5f5;
+}
+
+.about-section {
+  margin-bottom: 25px;
+}
+
+.about-section h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.about-section p {
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.service-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #f5f5f5;
+}
+
+.loading {
+  text-align: center;
+  color: #ddd;
+  font-size: 18px;
+}
+
+.error {
+  text-align: center;
+  color: #f44336;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .main-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .nav-item {
+    white-space: nowrap;
+    border-bottom: none;
+    border-right: 1px solid #ccc;
+  }
+  
+  .content-area {
+    padding: 30px 20px;
+  }
+  
+  .welcome-text {
+    font-size: 24px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+  }
+  
+  .accounts-grid {
+    grid-template-columns: 1fr;
+  }
+}

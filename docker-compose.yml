@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # Backend (.NET)
+  backend:
+    build:
+      context: ./marjane-app
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Mapping du port externe 8080 vers le port interne 8080
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - marjane-network
+
+  # Frontend (React)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Mapping du port externe 3000 vers le port interne 3000
+    depends_on:
+      - backend
+    networks:
+      - marjane-network
+
+networks:
+  marjane-network:
+    driver: bridge
