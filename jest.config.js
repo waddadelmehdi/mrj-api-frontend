@@ -1,6 +1,6 @@
 module.exports = {
-  // ... other config
+  // ...other config
   transformIgnorePatterns: [
-    "node_modules/(?!(axios)/)", // add any other ESM deps here
-  ]
+    "node_modules/(?!(axios)/)",
+  ],
 };
