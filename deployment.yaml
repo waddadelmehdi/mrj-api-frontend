@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: elmehdiwaddad/aptfront:v44v43v42v41v40v39v38v37v36v34v33v32v31v30v29latest  # Ce tag sera remplacé par Jenkins
+        image: elmehdiwaddad/aptfront:v57v44v43v42v41v40v39v38v37v36v34v33v32v31v30v29latest  # Ce tag sera remplacé par Jenkins
         ports:
         - containerPort: 80
         resources:
