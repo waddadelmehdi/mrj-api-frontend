@@ -1,0 +1,43 @@
+{
+  "presets": [
+    [
+      "react-app"
+    ]
+  ],
+  "plugins": [
+    [
+      "istanbul",
+      {
+        "exclude": [
+          "**/*.test.js",
+          "**/*.test.tsx",
+          "**/*.spec.js",
+          "**/*.spec.tsx",
+          "**/node_modules/**",
+          "**/coverage/**",
+          "**/build/**"
+        ]
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "istanbul",
+          {
+            "exclude": [
+              "**/*.test.js",
+              "**/*.test.tsx",
+              "**/*.spec.js",
+              "**/*.spec.tsx",
+              "**/node_modules/**",
+              "**/coverage/**",
+              "**/build/**"
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}
